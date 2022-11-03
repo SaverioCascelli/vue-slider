@@ -34,14 +34,15 @@ createApp({
             ],
             currentActive: 2,
             isCarouselGoing: true,
+            carouselInterval: 0
         }
 
     },
     methods:{
         startCarousel(){
             this.isCarouselGoing = true;
-            const carouselInterval = setInterval(() =>{
-                (!this.isCarouselGoing) ? clearInterval(carouselInterval) : this.increseActive();
+            this.carouselInterval = setInterval(() =>{
+               this.increseActive();
             }, 3000);
         },
 
@@ -49,10 +50,11 @@ createApp({
             
             this.currentActive++;
             if (this.currentActive >= this.cities.length) this.currentActive = 0;
-        },
+        }, 
 
-        carLog(){
-            console.log(this.isCarouselGoing);
+        stopCarousel(){
+            clearInterval(this.carouselInterval);
+            this.isCarouselGoing= false;
         }
     },
 
