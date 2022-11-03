@@ -36,5 +36,23 @@ createApp({
             
         }
 
+    },
+    methods:{
+        startCarousel(){
+            setInterval(() =>{
+                this.increseActive();
+            }, 3000);
+        },
+
+        increseActive(){
+            
+            this.currentActive++;
+            if (this.currentActive >= this.cities.length) this.currentActive = 0;
+        }
+    },
+
+    created(){
+        this.startCarousel();
+        
     }
 }).mount("#app")
