@@ -26,7 +26,10 @@
                                 <p>{{cities[currentActive].cityText}}</p>
                             </div> 
                         </div>
-                        <div class="bottom mx-auto d-flex position-relative">
+                        <div class="bottom mx-auto d-flex position-relative"
+                        @mouseenter ="isCarouselGoing = false"
+                        @mouseleave ="startCarousel()"
+                        > 
 
                             <div v-for="(city , index) in cities" 
                             :class="{'active' : currentActive === index }"
@@ -36,7 +39,7 @@
                             </div>
 
                         </div>
-                        
+
                     </div>
                 </div>                
             </div>

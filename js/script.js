@@ -33,14 +33,15 @@ createApp({
                 }
             ],
             currentActive: 2,
-            
+            isCarouselGoing: true,
         }
 
     },
     methods:{
         startCarousel(){
-            setInterval(() =>{
-                this.increseActive();
+            this.isCarouselGoing = true;
+            const carouselInterval = setInterval(() =>{
+                (!this.isCarouselGoing) ? clearInterval(carouselInterval) : this.increseActive();
             }, 3000);
         },
 
@@ -48,11 +49,14 @@ createApp({
             
             this.currentActive++;
             if (this.currentActive >= this.cities.length) this.currentActive = 0;
+        },
+
+        carLog(){
+            console.log(this.isCarouselGoing);
         }
     },
 
     created(){
         this.startCarousel();
-        
     }
 }).mount("#app")
