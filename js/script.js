@@ -17,7 +17,7 @@ createApp({
                     img: "argentina.jpg",
                 },
                 {
-                    name: "chile",
+                    name: "Chile",
                     cityText: "lain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual",
                     img: "chile.jpg",
                 },

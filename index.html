@@ -30,7 +30,8 @@
 
                             <div v-for="(city , index) in cities" 
                             :class="{'active' : currentActive === index }"
-                            class="img-preview">
+                            class="img-preview"
+                            @click="currentActive = index">
                                 <img :src="'img/' + city.img" alt="">
                             </div>
                             
