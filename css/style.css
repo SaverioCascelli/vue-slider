@@ -1,0 +1,67 @@
+.album .top{
+    background-color: red;
+    width: 70%;
+    aspect-ratio: 16 / 9;
+}
+
+.album .bottom{
+    width: 70%;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    
+}
+
+.sc-img {
+    object-fit: cover;
+}
+
+.img-preview{
+    width: calc(100% / 5);
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    filter: brightness(.5);
+}
+
+.img-preview.active{
+    filter: brightness(1);
+    border: 3px solid white;
+}
+
+.abs-text{
+    right: 0%;
+    top: 0%;
+    padding: 5% 10% 5% 20%;
+    font-weight: bold;
+    text-shadow: 3px 3px 3px black ;
+}
+
+.arrow{
+    top: 50%;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    transform: translate(0,-50%);
+    color: white;
+    background-color: rgba(0, 0, 0, .45);
+    text-align: center;
+    font-size: 1.3rem;
+    cursor:pointer;
+    z-index: 999;
+    position: absolute;
+}
+
+.arrow:hover{
+    background-color: rgba(255, 255, 255, .45);
+}
+
+.arrow.right{
+    right:10px;
+}
+
+.arrow.left{
+    left:10px;
+}
