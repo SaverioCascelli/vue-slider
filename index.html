@@ -20,32 +20,20 @@
                 <div class="col">
                     <div class="album">
                         <div class="top mx-auto overflow-hidden position-relative">
-                            <img class="sc-img" src="img/peru.jpg" alt="">
+                            <img class="sc-img" :src="'img/' + cities[currentActive].img" alt="">
                             <div class="abs-text position-absolute text-white text-end "  >
-                                <h2>Perù</h2>
-                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum, quod!</p>
+                                <h2>{{cities[currentActive].name}}</h2>
+                                <p>{{cities[currentActive].cityText}}</p>
                             </div> 
                         </div>
                         <div class="bottom mx-auto d-flex position-relative">
 
-                            <div class="img-preview">
-                                <img :src="'img/' + cities[0].img" alt="">
+                            <div v-for="(city , index) in cities" 
+                            :class="{'active' : currentActive === index }"
+                            class="img-preview">
+                                <img :src="'img/' + city.img" alt="">
                             </div>
-                            <div class="img-preview">
-                                <img src="img/peru.jpg" alt="">
-                            </div>
-                            <div class="img-preview">
-                                <img src="/img/peru.jpg" alt="">
-                            </div>
-                            <div class="img-preview">
-                                <img src="/img/peru.jpg" alt="">
-                            </div> 
-                            <div class="img-preview">
-                                <img src="/img/peru.jpg" alt="">
-                            </div>
-                            <div class="img-preview">
-                                <img src="/img/peru.jpg" alt="">
-                            </div>
+                            
 
                             <div class="arrows">
                                 <div class="arrow left ">

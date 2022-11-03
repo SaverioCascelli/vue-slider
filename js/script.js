@@ -32,7 +32,7 @@ createApp({
                     img: "sweden.jpg",
                 }
             ],
-            currentActive: 0,
+            currentActive: 2,
             
         }
 
